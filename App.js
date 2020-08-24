@@ -36,7 +36,7 @@ class App extends React.Component {
 
       <View style={styles.Container}>
 
-        <Counter />
+        <AddToCartButtun />
 
       </View>
     )

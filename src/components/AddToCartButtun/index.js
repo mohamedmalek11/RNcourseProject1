@@ -1,47 +1,48 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import {AppButton} from '../appButton';
+import { View, Text } from 'react-native';
+import { AppButton } from '../appButton';
 import styles from './styles';
 
 
-export function AddToCartButtun() {
+export function AddToCartButtun(props) {
 
+    const [quantity, setQuantity] = React.useState(0);
 
-    state = {
-        Quantity: 0,
-    }
-    
     const incramentQuantetyHandler = () => {
-        this.setState(pervState => ({Quantity: pervState.Quantity + 1}))
+        setQuantity(quantity + 1);
     };
 
     const deramentQuantetyHandler = () => {
-        this.setState(pervState => ({Quantity: pervState.Quantity - 1}))
+        setQuantity(quantity - 1);
     };
-    
-    
+
     const renderInitialButtun = () => {
-        return <AppButton onPress = {this.incramentQuantetyHandler} title="ADD TO CART" wrapperStyle={styles.buttun}/>
+        return (
+        <AppButton onPress={incramentQuantetyHandler}
+            title="ADD TO CART"
+            wrapperStyle={styles.buttun} />
+        )
     };
 
     const renderIncreaseDecreaceButtun = () => {
         return (
-            <View style = {[styles.increaseDecreaseContainer, styles.buttun]}>
-                <Text onPress={this.deramentQuantetyHandler}>-</Text>
-                <Text>{this.state.Quantity}</Text>
-                <Text onPress={this.incramentQuantetyHandler}>+</Text>
+            <View style={[styles.increaseDecreaseContainer, styles.buttun]}>
+                <Text onPress={deramentQuantetyHandler}>-</Text>
+                <Text>{quantity}</Text>
+                <Text onPress={incramentQuantetyHandler}>+</Text>
             </View>
-        )
+        );
+
     };
 
+    return (
+        <View style={styles.wrapper}>
+            {
+                quantity === 0
+                    ? renderInitialButtun()
+                    : renderIncreaseDecreaceButtun()
+            }
 
-        
-        <View style = {styles.wrapper}>
-        {
-           this.state.Quantity === 0
-         ? renderInitialButtun()
-         : renderIncreaseDecreaceButtun()
-        }
         </View>
-    
+    ); 
 }

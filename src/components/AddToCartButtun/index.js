@@ -4,25 +4,27 @@ import {AppButton} from '../appButton';
 import styles from './styles';
 
 
-export class AddToCartButtun extends React.Component {
+export function AddToCartButtun() {
+
+
     state = {
         Quantity: 0,
     }
     
-    incramentQuantetyHandler = () => {
+    const incramentQuantetyHandler = () => {
         this.setState(pervState => ({Quantity: pervState.Quantity + 1}))
     };
 
-    deramentQuantetyHandler = () => {
+    const deramentQuantetyHandler = () => {
         this.setState(pervState => ({Quantity: pervState.Quantity - 1}))
     };
     
     
-    renderInitialButtun = () => {
+    const renderInitialButtun = () => {
         return <AppButton onPress = {this.incramentQuantetyHandler} title="ADD TO CART" wrapperStyle={styles.buttun}/>
     };
 
-    renderIncreaseDecreaceButtun = () => {
+    const renderIncreaseDecreaceButtun = () => {
         return (
             <View style = {[styles.increaseDecreaseContainer, styles.buttun]}>
                 <Text onPress={this.deramentQuantetyHandler}>-</Text>
@@ -33,14 +35,13 @@ export class AddToCartButtun extends React.Component {
     };
 
 
-    render() {
-        return (
+        
         <View style = {styles.wrapper}>
         {
            this.state.Quantity === 0
-         ? this.renderInitialButtun()
-         : this.renderIncreaseDecreaceButtun()
+         ? renderInitialButtun()
+         : renderIncreaseDecreaceButtun()
         }
-        </View>);
-    }
+        </View>
+    
 }

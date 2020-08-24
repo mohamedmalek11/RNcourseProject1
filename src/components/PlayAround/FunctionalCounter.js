@@ -1,8 +1,11 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View,
+     Text,
+      Button } from 'react-native';
 
 export function Counter(props) {
 
+    // sitting Counter on Defult Value
     const [counter, setCounter] = React.useState(0);
 
     const incrementHandler = () => {

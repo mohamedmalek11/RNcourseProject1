@@ -36,7 +36,7 @@ class App extends React.Component {
 
       <View style={styles.Container}>
 
-        <AddToCartButtun />
+        <Timer maxSeconds={59} descending ={true} deadlineFunction = {()=> alert("Time Out")}/>
 
       </View>
     )

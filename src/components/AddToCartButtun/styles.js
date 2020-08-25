@@ -19,9 +19,10 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: incDecBtnColor,
   },
-  text: {fontSize: 24},
+  text: {fontSize: 30},
   plusMinus: {
-    padding: 10,
+    padding: 12,
+    
   },
 });
 

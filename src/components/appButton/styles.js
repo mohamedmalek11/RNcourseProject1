@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     borderColor: buttonColor,
     borderRadius: 5,
     borderWidth: 1,
-    padding: 10,
+    padding: 15,
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -20,16 +20,16 @@ export function AddToCartButtun(props) {
         return (
         <AppButton onPress={incramentQuantetyHandler}
             title="ADD TO CART"
-            wrapperStyle={styles.buttun} />
+            wrapperStyle={styles} />
         )
     };
 
     const renderIncreaseDecreaceButtun = () => {
         return (
             <View style={[styles.increaseDecreaseContainer, styles.buttun]}>
-                <Text onPress={deramentQuantetyHandler}>-</Text>
+                <Text onPress={deramentQuantetyHandler} style = {styles.plusMinus}>-</Text>
                 <Text>{quantity}</Text>
-                <Text onPress={incramentQuantetyHandler}>+</Text>
+                <Text onPress={incramentQuantetyHandler} style = {styles.plusMinus}>+</Text>
             </View>
         );
 

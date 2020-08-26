@@ -28,7 +28,7 @@ import { AppButton } from './src/components/appButton';
 import { Counter } from './src/components/PlayAround/FunctionalCounter';
 import { AddToCartButtun } from './src/components/AddToCartButtun'
 import { Timer } from './src/components/Timer';
-
+import {CounterCounter} from './src/components/PlayAround/Counter2'
 
 class App extends React.Component {
   render() {
@@ -36,7 +36,7 @@ class App extends React.Component {
 
       <View style={styles.Container}>
 
-        <Timer maxSeconds={59} descending ={true} deadlineFunction = {()=> alert("Time Out")}/>
+        <CounterCounter />
 
       </View>
     )
@@ -49,8 +49,6 @@ const styles = StyleSheet.create({
   },
   Container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   engine: {
     position: 'absolute',

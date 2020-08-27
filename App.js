@@ -29,26 +29,21 @@ import { Counter } from './src/components/PlayAround/FunctionalCounter';
 import { AddToCartButtun } from './src/components/AddToCartButtun'
 import { Timer } from './src/components/Timer';
 import {CounterCounter} from './src/components/PlayAround/Counter2'
-
+import {SignUpScreen} from './src/components/PlayAround/ResponsiveLayout';
 class App extends React.Component {
   render() {
     return (
 
-      <View style={styles.Container}>
-
-        <CounterCounter />
-
+      <View style= {{flex : 1,}} >
+        <SignUpScreen />
       </View>
-    )
-  }
+    );
+  };
 }
 
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
-  },
-  Container: {
-    flex: 1,
   },
   engine: {
     position: 'absolute',

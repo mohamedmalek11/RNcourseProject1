@@ -1,19 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { TextInput, View, Text, Dimensions } from 'react-native';
+import { rem } from '../../utils/Constants';
+import {ScaledSheet} from 'react-native-size-matters';
+
+const Styles = ScaledSheet.create({
+    InputStyle : {
+        height: '35@s',
+        fontSize: '20@s',
+        borderColor: '#bbb',
+        borderWidth: 1,
+        borderRadius: 7,
+        padding: 5,
+        marginBottom: 20,
+    },
+    TextInput: { alignContent: 'center',
+     fontSize: '20@s',
+      fontWeight: '500',
+     }  
+});
+
 
 const { width } = Dimensions.get('window')
 
 export function Input(props) {
     return (
-        <TextInput style={{
-            height: 40,
-            fontSize: 18,
-            borderColor: '#bbb',
-            borderWidth: 1,
-            borderRadius: 7,
-            padding: 5,
-            marginBottom: 20,
-        }} placeholder={props.placeholder} ></TextInput>
+        <TextInput style={Styles.InputStyle} placeholder={props.placeholder} ></TextInput>
     );
 
 };
@@ -40,7 +51,7 @@ export function SignUpScreen(props) {
             paddingHorizontal: 50,
 
         }}>
-            <View style={realWidth > 500 ? { paddingHorizontal: 100, } : null}>
+            <View style={realWidth > 500 ? { paddingHorizontal: 75, } : null}>
                 <Input placeholder={'Email'} />
 
                 <View style={realWidth > 500 ? { flexDirection: 'row' } : null}>
@@ -56,7 +67,7 @@ export function SignUpScreen(props) {
                 </View>
 
                 <View style={{ alignItems: 'center' }}>
-                    <Text style={{ alignContent: 'center', fontSize: 20, fontWeight: '400', }}>Sign Up</Text>
+                    <Text style={Styles.TextInput}>Sign Up</Text>
                 </View>
 
             </View>

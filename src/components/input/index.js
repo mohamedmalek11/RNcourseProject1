@@ -2,10 +2,27 @@ import React from 'react';
 import {TextInput, View} from 'react-native';
 
 export function Input(props) {
-  const {underlined, underlinedColore, underlinedHeight, ...rest} = props;
+  const {
+    underlined,
+    underlinedColore,
+    underlinedHeight,
+    borderd,
+    borderWidth,
+    borderRadius,
+    borderColor,
+    ...rest
+  } = props;
 
   return (
-    <View>
+    <View
+      style={
+        borderd && {
+          borderWidth: borderWidth || 1,
+          padding: 5,
+          borderRadius: borderRadius || 5,
+          borderColor: borderColor || '#bbb',
+        }
+      }>
       <TextInput {...rest} style={{padding: 1}} />
       {underlined && (
         <View

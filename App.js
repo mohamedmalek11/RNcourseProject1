@@ -24,19 +24,14 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import {AppButton} from './src/components/appButton';
-import {Counter} from './src/components/PlayAround/FunctionalCounter';
-import {AddToCartButtun} from './src/components/AddToCartButtun';
-import {Timer} from './src/components/Timer';
-import {CounterCounter} from './src/components/PlayAround/Counter2';
-import {SignUpScreen} from './src/components/PlayAround/ResponsiveLayout';
 import {Input} from './src/components/input';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 class App extends React.Component {
   render() {
     return (
       <View style={{flex: 1, justifyContent: 'center', marginHorizontal: 50}}>
-        <Input placeholder="Email" underlined  />
+        <Input placeholder="Email" stacked />
       </View>
     );
   }

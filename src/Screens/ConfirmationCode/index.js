@@ -4,9 +4,9 @@ import styles from './style';
 import {Input} from '../../components/input';
 import {AppButton} from '../../components/appButton';
 
-export function ConfirmationCode(props) {
+export function ConfirmationCodeScreen(props) {
   return (
-    // Enter your Phone Number style:
+    // Enter Confirmation Code style:
     <View style={styles.container}>
       <View style={styles.mianTextWrapper}>
         <Text style={styles.mianText}>Enter Confirmation Code</Text>
@@ -14,7 +14,7 @@ export function ConfirmationCode(props) {
 
       <View style={styles.InputWrapper}>
         <Input
-          // Confirm Style:
+          // Confirm Input Style:
           borderd
           placeholder="___ ___ ___ ___"
           placeholderPosition="center"

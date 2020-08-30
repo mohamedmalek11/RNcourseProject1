@@ -15,18 +15,20 @@ const styles = ScaledSheet.create({
     paddingHorizontal: '60@s',
   },
   InputWrapper: {
-    flex:1,
+    flex: 1,
     justifyContent: 'center',
-    
   },
-  ButtonStyle: {
-      
-  },
+  ButtonStyle: {},
   ButtonWrapperStyle: {
     flex: 1,
     paddingHorizontal: '30@s',
     justifyContent: 'flex-end',
-    paddingBottom: '40@s',
+    paddingBottom: '40@vs',
+  },
+  IconStyle: {
+    fontSize: 24,
+    marginRight: 5,
+    marginBottom:5,
   },
 });
 export default styles;

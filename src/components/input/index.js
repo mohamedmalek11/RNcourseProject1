@@ -2,6 +2,7 @@ import React from 'react';
 import {TextInput, View, StyleSheet, Text} from 'react-native';
 
 export function Input(props) {
+  // import Styles and Var from outside:
   const {
     underlined,
     underlinedColore,
@@ -25,6 +26,7 @@ export function Input(props) {
   return (
     <View
       style={[
+        // Borderd View:
         borderd && {
           borderWidth: borderWidth || 1,
           padding: 5,
@@ -38,12 +40,15 @@ export function Input(props) {
       )}
 
       <View
-        style={ {
+        style={{
           flexDirection: 'row',
           justifyContent: placeholderPosition || 'flex-start',
         }}>
         {renderIconLeft && (
-          <View style={[styles.IconWrapper,IconWrapperStyle]}>{renderIconLeft()}</View>
+          // Adds Icon to Inputs
+          <View style={[styles.IconWrapper, IconWrapperStyle]}>
+            {renderIconLeft()}
+          </View>
         )}
         <TextInput
           placeholder={stacked ? '' : placeholder}
@@ -57,6 +62,7 @@ export function Input(props) {
 
       {(underlined || stacked) && (
         <View
+          // UnderLined And Stacked View:
           style={{
             height: underlinedHeight || 1,
             backgroundColor: underlinedColore || '#bbb',

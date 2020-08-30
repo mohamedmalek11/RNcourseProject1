@@ -24,16 +24,12 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import {Input} from './src/components/input';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+
+import {SignInScreen} from './src/Screens/Signin';
 
 class App extends React.Component {
   render() {
-    return (
-      <View style={{flex: 1, justifyContent: 'center', marginHorizontal: 50}}>
-        <Input placeholder="Email" stacked />
-      </View>
-    );
+    return <SignInScreen />;
   }
 }
 

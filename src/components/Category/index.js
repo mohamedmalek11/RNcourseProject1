@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, View, Image} from 'react-native';
+import {Card} from '../Card'
 import styles from './style';
 
 export function Category(props) {
@@ -8,7 +9,10 @@ export function Category(props) {
     <View style={styles.container}>
     
       <View style={styles.imageWrapper}>
-        <Image style = {styles.imageStyle} source = {{uri: category.imageUrl}} />
+      <Card>
+      <Image style = {styles.imageStyle}  source = {{uri: category.imageUrl}} />
+      </Card>
+        
       </View>
       <View style={styles.titletWrapper}>
         <Text>{category.title}</Text>

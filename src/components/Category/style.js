@@ -3,8 +3,8 @@ import {Dimensions} from 'react-native';
 
 const {width} = Dimensions.get('window');
 
-const ImageWidth = width / 3.5;
-const ImageHight = ImageWidth * 1;
+const ImageWidth = width / 4;
+const ImageHight = ImageWidth * 1.5;
 
 const styles = ScaledSheet.create({
   container: {
@@ -16,11 +16,11 @@ const styles = ScaledSheet.create({
   imageStyle: {
     width: ImageWidth,
     height: ImageHight,
-    borderRadius: 10,
-    margin: 5,
+    borderRadius: 5,
+    margin: 0,
   },
   titleWrapper: {
-    marginTop: 5,
+    marginTop: 10,
   },
 });
 export default styles;

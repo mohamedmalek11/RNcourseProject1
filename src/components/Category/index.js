@@ -8,9 +8,9 @@ export function Category(props) {
     <View style={styles.container}>
     
       <View style={styles.imageWrapper}>
-        <Image source = {{uri: category.imageUrl}} />
+        <Image style = {styles.imageStyle} source = {{uri: category.imageUrl}} />
       </View>
-      <View style={styles.textWrapper}>
+      <View style={styles.titletWrapper}>
         <Text>{category.title}</Text>
       </View>
     </View>

@@ -1,0 +1,1 @@
+export const MainFont = '#2b63db'

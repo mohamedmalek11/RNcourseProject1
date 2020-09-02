@@ -18,4 +18,12 @@ const appendZero = val => {
         return '0' + val;
     }
     return val;
+};
+
+export const getActualPrice =  (price, discount) => {
+     if (discount) {
+        price = price - discount* price;
+        return price;
+     }
+     return price;
 }

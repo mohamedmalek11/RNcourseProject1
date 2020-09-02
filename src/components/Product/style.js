@@ -8,9 +8,7 @@ const ImageHight = ImageWidth * 1.5;
 
 const styles = ScaledSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    
   },
   imageWrapper: {},
   imageStyle: {

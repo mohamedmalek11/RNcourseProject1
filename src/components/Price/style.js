@@ -6,20 +6,15 @@ const styles = ScaledSheet.create({
     flexDirection: 'row',
   },
   price: {
-    margin: '5@s',
-    fontSize: '17@s',
+    margin: '4@s',
+    fontSize: '15@s',
     color: MainFont,
   },
   oldPrice: {
     textDecorationLine: 'line-through',
-    margin: '5@s',
+    margin: '4@s',
     color: '#999',
-    fontSize: '14@s',
-  },
-  newPrice: {
-    color: 'red',
-    margin: '5@s',
-    fontSize: '17@s',
+    fontSize: '13@s',
   },
 });
 

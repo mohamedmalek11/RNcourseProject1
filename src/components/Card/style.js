@@ -5,7 +5,7 @@ const styles = ScaledSheet.create({
   container: Platform.select({
     android: {
       elevation: 10,
-      backgroundColor: '#ddd',
+      backgroundColor: '#fff',
       borderRadius:5,
       padding: 4,
     },

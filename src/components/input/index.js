@@ -56,7 +56,7 @@ export function Input(props) {
           style={[{padding: 2}, style]}
         />
         {renderIconRight && (
-          <View style={styles.IconWrapper}>{renderIconRight()}</View>
+          <View style={[styles.IconWrapper, IconWrapperStyle]}>{renderIconRight()}</View>
         )}
       </View>
 

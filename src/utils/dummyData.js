@@ -4,7 +4,7 @@ export const dummyCategory = {
 };
 
 export const dummyProductWithDiscount = {
-    title : "Product Product ProductProduct",
+    title : "Product Name",
     imageUrl: 'https://reactjs.org/logo-og.png',
     price : 100,
     discount: 0.3,

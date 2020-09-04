@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { AppButton } from '../appButton';
+import { AppButton } from '../AppButton';
 import styles from './styles';
 
 

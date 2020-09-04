@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image,Platform} from 'react-native';
 import {AddToCartButtun} from '../../components/AddToCartButtun';
 import {Price} from '../../components/Price';
 import {dummyProductWithDiscount} from '../../utils/dummyData';
@@ -17,7 +17,7 @@ export function ProductScreen(props) {
     <View style = {styles.Container}>
       <Image source={{uri: product.imageUrl}} style={styles.image} />
       <View style={styles.productTitleWrapper}>
-        <Icon name="md-arrow-back" style={styles.icon} />
+        <Icon name={Platform.select({android: 'md-arrow-back' , ios: "chevron-back-outline"})}  style={styles.icon} />
         <View style={styles.titleWrapper}>
           <Text style={styles.title}>{product.title}</Text>
         </View>

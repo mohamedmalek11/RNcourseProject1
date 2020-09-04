@@ -10,6 +10,8 @@ const stlyes = ScaledSheet.create({
     padding: '10@s',
     marginVertical: '10@vs',
     marginHorizontal: '20@s',
+    backgroundColor: '#fff',
+    borderRadius: '3@s'
   },
   CartContent:{
       padding: '10@s',

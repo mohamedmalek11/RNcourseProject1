@@ -16,6 +16,11 @@ export const dummyProduct = {
     imageUrl: 'https://reactjs.org/logo-og.png',
     price : 100,
 };
-export const cartItem = {
+export const dummycartItem = {
     product: dummyProductWithDiscount
-}
+};
+export const dummyorder = {
+    cartItems: [dummycartItem],
+    cost: 150,
+    status: 'Placed '
+};

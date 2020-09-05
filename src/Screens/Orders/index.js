@@ -1,13 +1,23 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, FlatList} from 'react-native';
 import {Order} from '../../components/Order';
-import {dummyOrder} from '../../utils/dummyData';
+import {dummyOrders} from '../../utils/dummyData';
 import styles from './style';
+
+
+function renderOrder({item}) {
+  return <Order order = {item} />
+}
+
+
+function renderOrders (orderItem) {
+  return <FlatList data = {orderItem} renderItem = {renderOrder} />
+}
 
 export function OrdersScreen(props) {
   return (
     <View style={styles.container}>
-      <Order order={dummyOrder} />
+      {renderOrders(dummyOrders)}
     </View>
   );
 }

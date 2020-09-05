@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, View, Image} from 'react-native';
 import {Card} from '../Card'
 import styles from './style';
+import { verticalScale } from 'react-native-size-matters';
 
 export function Category(props) {
   const {category} = props;
@@ -15,7 +16,7 @@ export function Category(props) {
         
       </View>
       <View style={styles.titletWrapper}>
-        <Text>{category.title}</Text>
+        <Text style = {styles.categoryTitle} >{category.title}</Text>
       </View>
     </View>
   );

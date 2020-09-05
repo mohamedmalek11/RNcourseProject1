@@ -8,7 +8,7 @@ const ImageHight = ImageWidth * 1.5;
 
 const styles = ScaledSheet.create({
   container: {
-   
+   alignItems: 'center'
   },
   imageWrapper: {},
   imageStyle: {
@@ -19,6 +19,12 @@ const styles = ScaledSheet.create({
   },
   titleWrapper: {
     marginTop: 10,
+    
+  },
+  categoryTitle: {
+    marginTop: '10@vs',
+    marginBottom: '10@s',
+    fontSize: '13@s'
   },
 });
 export default styles;

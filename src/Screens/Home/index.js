@@ -1,22 +1,31 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, FlatList, ScrollView} from 'react-native';
 import {Category} from '../../components/Category';
-import {Product} from '../../components/Product';
-import {dummyProductWithDiscount, dummyProduct, dummyCategory} from '../../utils/dummyData'
+import {dummyProducts, dummyCategories} from '../../utils/dummyData';
+import {ProductsList} from '../../components/ProductsList';
 import styles from './style';
 
-export function HomeScreen (props) {
-    return(
-        <View style = {styles.Container}>
-            <View>
-            <Text style ={styles.HeaderTitle}>Categories</Text>
-                <Category category = {dummyCategory} />
-            </View>
-            <View>
-            <Text style ={styles.HeaderTitle}>Products</Text>
-            <Product product = {dummyProductWithDiscount} />
-            </View>
+function renderCategory({item}) {
+  return <Category category={item} />;
+}
 
-        </View>
-    );
-};
+function renderCategoriesList(categories) {
+  return (
+    <FlatList data={categories} renderItem={renderCategory} horizontal={true} />
+  );
+}
+
+export function HomeScreen(props) {
+  return (
+    <ScrollView style={styles.Container}>
+      <View>
+        <Text style={styles.HeaderTitle}>Categories</Text>
+        {renderCategoriesList(dummyCategories)}
+      </View>
+      <View>
+        <Text style={styles.HeaderTitle}>Products</Text>
+        <ProductsList data = {dummyProducts} />
+      </View>
+    </ScrollView>
+  );
+}

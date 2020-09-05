@@ -20,6 +20,7 @@ export function Input(props) {
     style,
     IconWrapperStyle,
     WrapperStyle,
+    placeholderSize,
     ...rest
   } = props;
 
@@ -36,7 +37,13 @@ export function Input(props) {
         WrapperStyle,
       ]}>
       {stacked && (
-        <Text style={{color: placeholderColore || '#000'}}>{placeholder}</Text>
+        <Text
+          style={{
+            color: placeholderColore || '#aaa',
+            fontSize: placeholderSize || 15,
+          }}>
+          {placeholder}
+        </Text>
       )}
 
       <View
@@ -53,10 +60,12 @@ export function Input(props) {
         <TextInput
           placeholder={stacked ? '' : placeholder}
           {...rest}
-          style={[{padding: 2}, style]}
+          style={style}
         />
         {renderIconRight && (
-          <View style={[styles.IconWrapper, IconWrapperStyle]}>{renderIconRight()}</View>
+          <View style={[styles.IconWrapper, IconWrapperStyle]}>
+            {renderIconRight()}
+          </View>
         )}
       </View>
 

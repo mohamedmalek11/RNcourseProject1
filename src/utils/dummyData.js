@@ -99,11 +99,60 @@ export const dummyProducts = [
   dummyProduct8,
 ];
 
-export const dummycartItem = {
+export const dummycartItem1 = {
   product: dummyProduct1,
 };
-export const dummyOrder = {
-  cartItems: [dummycartItem],
+
+export const dummycartItem2 = {
+  product: dummyProduct2,
+};
+export const dummycartItem3 = {
+  product: dummyProduct3,
+};
+export const dummycartItem4 = {
+  product: dummyProduct4,
+};
+export const dummycartItem5 = {
+  product: dummyProduct5,
+};
+export const dummycartItem6 = {
+  product: dummyProduct6,
+};
+
+export const dummycartItems = [
+  dummycartItem1,
+  dummycartItem2,
+  dummycartItem3,
+  dummycartItem4,
+  dummycartItem5,
+  dummycartItem6,
+];
+
+export const dummyOrder1 = {
+  cartItems: [dummycartItem1],
   cost: 150,
   status: 'Placed ',
 };
+export const dummyOrder2 = {
+  cartItems: [dummycartItem2],
+  cost: 150,
+  status: 'Regected ',
+};
+export const dummyOrder3 = {
+  cartItems: [dummycartItem3],
+  cost: 150,
+  status: 'shipped ',
+};
+export const dummyOrder4 = {
+  cartItems: [dummycartItem4],
+  cost: 150,
+  status: 'under review ',
+};
+export const dummyOrder5 = {
+  cartItems: [dummycartItem5],
+  cost: 150,
+  status: 'Placed ',
+};
+
+
+export const dummyOrders = [dummyOrder1,dummyOrder2,dummyOrder3,dummyOrder4,dummyOrder5]

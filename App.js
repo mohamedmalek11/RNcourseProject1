@@ -17,11 +17,11 @@ import {
   Button,
 } from 'react-native';
 
-import {AccountScreen} from './src/Screens/Account';
+import {HomeScreen} from './src/Screens/Home'
 
 class App extends React.Component {
   render() {
-    return <AccountScreen />;
+    return <HomeScreen />;
   }
 }
 

@@ -3,7 +3,7 @@ import {Dimensions} from 'react-native';
 
 const {width} = Dimensions.get('window');
 
-const ImageWidth = width / 2.5;
+const ImageWidth = width / 2 - 20;
 const ImageHight = ImageWidth * 1.5;
 
 const styles = ScaledSheet.create({

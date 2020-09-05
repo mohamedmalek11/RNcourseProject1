@@ -5,7 +5,6 @@ const styles = ScaledSheet.create({
     flex: 1,
   },
   wrapper: {
-    flex: 1,
     justifyContent: 'flex-end',
   },
   totalWrapper: {

@@ -1,6 +1,10 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Text} from 'react-native';
+import {HomeStack} from './HomeStack';
+import {CartStack} from './CartStack';
+import {SearchStack} from './SearchStack';
+import {AccountStack} from './AccountStack';
 import {IonIcon} from '../components/IonIcon';
 import {MainFont, GrayDark} from '../utils/colors';
 
@@ -11,17 +15,17 @@ export function HomeTabs(props) {
     <Tabs.Navigator
       screenOptions={({route}) => {
         const iconName = {
-          Home: 'home',
-          Search: 'search',
-          Cart: 'cart',
-          Account: 'person',
+          HomeStack: 'home',
+          SearchStack: 'search',
+          CartStack: 'cart',
+          AccountStack: 'person',
         };
 
         const label = {
-          Home: 'Home',
-          Search: 'Search',
-          Cart: 'Cart',
-          Account: 'Account',
+          HomeStack: 'Home',
+          SearchStack: 'Search',
+          CartStack: 'Cart',
+          AccountStack: 'Account',
         };
 
         return {
@@ -39,10 +43,10 @@ export function HomeTabs(props) {
           ),
         };
       }}>
-      <Tabs.Screen name="Home" component={() => <Text>hello</Text>} />
-      <Tabs.Screen name="Cart" component={() => <Text>hello</Text>} />
-      <Tabs.Screen name="Search" component={() => <Text>hello</Text>} />
-      <Tabs.Screen name="Account" component={() => <Text>hello</Text>} />
+      <Tabs.Screen name="HomeStack" component={HomeStack} />
+      <Tabs.Screen name="CartStack" component={CartStack} />
+      <Tabs.Screen name="SearchStack" component={SearchStack} />
+      <Tabs.Screen name="AccountStack" component={AccountStack} />
     </Tabs.Navigator>
   );
 }

@@ -17,11 +17,11 @@ import {
   Button,
 } from 'react-native';
 
-import {HomeScreen} from './src/Screens/Home'
+import {AppContainer} from './src/Navigation/index';
 
 class App extends React.Component {
   render() {
-    return <HomeScreen />;
+    return <AppContainer />;
   }
 }
 

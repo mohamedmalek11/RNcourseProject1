@@ -8,7 +8,7 @@ function renderIconSearch() {
   return <Icon name="search" style={styles.SearchIcon} />;
 }
 
-export function Search(props) {
+export function SearchScreen(props) {
   return (
     <View style={styles.Container}>
       <Input

@@ -10,6 +10,7 @@ function renderPhoneIcon() {
 }
 
 export function SignInScreen(props) {
+  const {navigation} = props;
   return (
     // Enter your Phone Number style:
     <View style={styles.container}>
@@ -28,7 +29,13 @@ export function SignInScreen(props) {
         />
       </View>
       <View style={styles.ButtonWrapperStyle}>
-        <AppButton title="done" WrapperStyle={styles.ButtonStyle} />
+        <AppButton
+          title="Done"
+          titleStyle={styles.ButtonStyle}
+          onPress = {() => {
+            navigation.navigate('ConfirmationCodeScreen')
+          }}
+        />
       </View>
     </View>
   );

@@ -18,7 +18,10 @@ const styles = ScaledSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
-  ButtonStyle: {},
+  ButtonStyle: {
+    fontSize : "15@s",
+    fontWeight: 'bold'
+  },
   ButtonWrapperStyle: {
     flex: 1,
     paddingHorizontal: '30@s',

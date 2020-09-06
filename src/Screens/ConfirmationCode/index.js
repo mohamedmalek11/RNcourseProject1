@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import styles from './style';
-import {Input} from '../../components/input';
+import {Input} from '../../components/Input';
 import {AppButton} from '../../components/AppButton';
 
 export function ConfirmationCodeScreen(props) {

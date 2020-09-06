@@ -1,9 +1,18 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native'
+import {NavigationContainer} from '@react-navigation/native';
+import {AuthStack} from './AuthStack';
+import {Text} from 'react-native';
 
-function AppContainer (props) {
+function HomeTabs(props) {
+  return <Text>HomeTabs</Text>;
+}
 
-    const {isAuthenticated} = props;
+export function AppContainer(props) {
+  const {isAuthenticated} = props;
 
-    return
+  return (
+    <NavigationContainer>
+      {isAuthenticated ? <HomeTabs /> : <AuthStack />}
+    </NavigationContainer>
+  );
 }

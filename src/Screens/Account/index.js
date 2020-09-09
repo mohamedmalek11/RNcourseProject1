@@ -34,13 +34,13 @@ function renderButtonSection(navigation) {
   return (
     <View style={styles.renderButtonSection}>
       {renderInfoButton('person-outline', 'Profile', () =>
-        navigation.navigate('UpdateAccountScreen'),
+        navigation.navigate('Update Account'),
       )}
       {renderInfoButton('navigate-outline', 'Shipping Adresses', () =>
-        navigation.navigate('AdressScreen'),
+        navigation.navigate('Adress'),
       )}
       {renderInfoButton('cart-outline', 'Orders', () =>
-        navigation.navigate('OrdersScreen'),
+        navigation.navigate('Orders'),
       )}
       {renderInfoButton('log-out-outline', 'Log Out', () => {})}
     </View>

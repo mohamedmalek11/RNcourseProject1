@@ -11,11 +11,13 @@ export function CartStack(props) {
       <Stack.Screen
         name="Cart"
         component={CartScreen}
-        
+        options={{headerShown: false}}
       />
-      <Stack.Screen 
-      name="ProductScreen" 
-      component={ProductScreen} />
+      <Stack.Screen
+        name="ProductScreen"
+        component={ProductScreen}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 }

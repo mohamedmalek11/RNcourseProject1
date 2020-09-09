@@ -10,12 +10,25 @@ const Stack = createStackNavigator();
 export function AccountStack(props) {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Account" component={AccountScreen} />
-      <Stack.Screen name="AdressScreen" component={AdressScreen} />
-      <Stack.Screen name="OrdersScreen" component={OrdersScreen} />
       <Stack.Screen
-        name="UpdateAccountScreen"
+        name="Account"
+        component={AccountScreen}
+        options={{headerShown: true}}
+      />
+      <Stack.Screen
+        name="Adress"
+        component={AdressScreen}
+        options={{headerShown: true}}
+      />
+      <Stack.Screen
+        name="Orders"
+        component={OrdersScreen}
+        options={{headerShown: true}}
+      />
+      <Stack.Screen
+        name="Update Account"
         component={UpdateAccountScreen}
+        options={{headerShown: true}}
       />
     </Stack.Navigator>
   );

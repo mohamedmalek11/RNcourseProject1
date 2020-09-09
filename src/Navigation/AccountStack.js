@@ -10,15 +10,11 @@ const Stack = createStackNavigator();
 export function AccountStack(props) {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        name="Account"
-        component={AccountScreen}
-        
-      />
+      <Stack.Screen name="Account" component={AccountScreen} />
       <Stack.Screen name="AdressScreen" component={AdressScreen} />
       <Stack.Screen name="OrdersScreen" component={OrdersScreen} />
       <Stack.Screen
-        name="UpdateAccountScreen  "
+        name="UpdateAccountScreen"
         component={UpdateAccountScreen}
       />
     </Stack.Navigator>

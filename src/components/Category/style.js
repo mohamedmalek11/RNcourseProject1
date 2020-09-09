@@ -7,7 +7,7 @@ const ImageWidth = width / 4;
 const ImageHight = ImageWidth * 1.5;
 
 const styles = ScaledSheet.create({
-  TouchableStyle: {
+  container: {
     alignItems: 'center',
   },
   imageWrapper: {},

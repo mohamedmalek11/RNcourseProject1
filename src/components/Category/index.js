@@ -13,6 +13,7 @@ export function Category(props) {
   return (
     <PlatformTouchable
       style={styles.container}
+      TouchableStyle={styles.TouchableStyle}
       onPress={() => navigation.navigate('CategoryScreen')}>
       <View style={styles.imageWrapper}>
         <Card>

@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {IonIcon} from '../../components/IonIcon';
+import {PlatformTouchable} from '../../components/PlatformTouchable';
 import styles from './style';
 
 function renderInfoSection() {
@@ -16,35 +17,42 @@ function renderInfoSection() {
   );
 }
 
-function renderInfoButton(iconName, title) {
+function renderInfoButton(iconName, title, onPress) {
   return (
-    <View style={styles.renderInfoButton}>
-      <View style = {styles.iconTextWrapper}>
+    <PlatformTouchable style={styles.renderInfoButton} onPress={onPress}>
+      <View style={styles.iconTextWrapper}>
         <IonIcon name={iconName} style={styles.InfoIcon} />
         <Text style={styles.InfoText}>{title}</Text>
       </View>
 
       <View style={styles.infoUnderLine} />
-    </View>
+    </PlatformTouchable>
   );
 }
 
-function renderButtonSection() {
+function renderButtonSection(navigation) {
   return (
     <View style={styles.renderButtonSection}>
-      {renderInfoButton('person-outline', 'Profile')}
-      {renderInfoButton('navigate-outline', 'Shipping Adresses')}
-      {renderInfoButton('cart-outline', 'Orders')}
-      {renderInfoButton('log-out-outline', 'Log Out')}
+      {renderInfoButton('person-outline', 'Profile', () =>
+        navigation.navigate('UpdateAccountScreen'),
+      )}
+      {renderInfoButton('navigate-outline', 'Shipping Adresses', () =>
+        navigation.navigate('AdressScreen'),
+      )}
+      {renderInfoButton('cart-outline', 'Orders', () =>
+        navigation.navigate('OrdersScreen'),
+      )}
+      {renderInfoButton('log-out-outline', 'Log Out', () => {})}
     </View>
   );
 }
 
 export function AccountScreen(props) {
+  const {navigation} = props;
   return (
     <View style={styles.container}>
       {renderInfoSection()}
-      {renderButtonSection()}
+      {renderButtonSection(navigation)}
     </View>
   );
 }

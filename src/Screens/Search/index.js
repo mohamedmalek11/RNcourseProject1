@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View,SafeAreaView} from 'react-native';
 import {Input} from '../../components/Input';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './style';
@@ -10,6 +10,7 @@ function renderIconSearch() {
 
 export function SearchScreen(props) {
   return (
+    <SafeAreaView style={styles.Container}>
     <View style={styles.Container}>
       <Input
         borderd
@@ -19,5 +20,6 @@ export function SearchScreen(props) {
         style = {styles.placeholder}
       />
     </View>
+    </SafeAreaView>
   );
 }

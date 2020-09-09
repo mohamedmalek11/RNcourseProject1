@@ -11,7 +11,7 @@ export function SearchStack(props) {
       <Stack.Screen
         name="Search"
         component={SearchScreen}
-       
+       options = {{headerShown: true}}
       />
       <Stack.Screen 
       name="ProductScreen" 

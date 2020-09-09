@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, SafeAreaView} from 'react-native';
 import {CartItems} from '../../components/CartItems';
 import {AppButton} from '../../components/AppButton';
 import {dummycartItems} from '../../utils/dummyData';
@@ -15,7 +15,7 @@ function renderCartItems(cartItems) {
 
 export function CartScreen(props) {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {renderCartItems(dummycartItems)}
 
       <View style={styles.wrapper}>
@@ -24,6 +24,6 @@ export function CartScreen(props) {
           <AppButton title="CHECK OUT" titleStyle={styles.buttonText} />
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }

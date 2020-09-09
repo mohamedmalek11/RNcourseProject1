@@ -2,12 +2,12 @@ import React from 'react';
 import {View, Text, Image,Platform} from 'react-native';
 import {AddToCartButtun} from '../../components/AddToCartButtun';
 import {Price} from '../../components/Price';
-import {dummyProductWithDiscount} from '../../utils/dummyData';
+import {dummyProduct1} from '../../utils/dummyData';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './style';
 
 function getProduct(productID) {
-  return dummyProductWithDiscount;
+  return dummyProduct1;
 }
 
 export function ProductScreen(props) {

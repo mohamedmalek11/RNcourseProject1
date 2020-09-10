@@ -58,7 +58,7 @@ export function Input(props) {
           </View>
         )}
         <TextInput
-          placeholder={stacked ? '' : placeholder}
+          placeholder={stacked ? '                         ' : placeholder}
           {...rest}
           style={style}
         />

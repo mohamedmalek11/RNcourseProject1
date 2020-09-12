@@ -53,7 +53,7 @@ export function Input(props) {
       <View
         style={{
           flexDirection: 'row',
-          justifyContent: placeholderPosition || 'space-between',
+          justifyContent: placeholderPosition || 'flex-start',
         }}>
         {renderIconLeft && (
           // Adds Icon to Inputs

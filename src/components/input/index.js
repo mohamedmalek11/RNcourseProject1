@@ -1,5 +1,6 @@
 import React from 'react';
 import {TextInput, View, StyleSheet, Text} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export function Input(props) {
   // import Styles and Var from outside:
@@ -20,6 +21,9 @@ export function Input(props) {
     style,
     IconWrapperStyle,
     WrapperStyle,
+    showValidationFeedback,
+    isValed,
+    touched,
     placeholderSize,
     ...rest
   } = props;
@@ -49,7 +53,7 @@ export function Input(props) {
       <View
         style={{
           flexDirection: 'row',
-          justifyContent: placeholderPosition || 'flex-start',
+          justifyContent: placeholderPosition || 'space-between',
         }}>
         {renderIconLeft && (
           // Adds Icon to Inputs
@@ -66,6 +70,12 @@ export function Input(props) {
           <View style={[styles.IconWrapper, IconWrapperStyle]}>
             {renderIconRight()}
           </View>
+        )}
+        {showValidationFeedback && touched && (
+          <Icon
+            name={isValed ? 'checkmark' : 'close'}
+            style={{fontSize: 18, color: isValed ? 'green' : '#d12b2b'}}
+          />
         )}
       </View>
 

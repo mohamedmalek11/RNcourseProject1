@@ -4,7 +4,7 @@ import styles from './style';
 import {Input} from '../../components/Input';
 import {AppButton} from '../../components/AppButton';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {validate} from '../../utils/validate';
+import {useInput} from '../../utils/useInput';
 
 function renderPhoneIcon() {
   return <Icon name="phone" style={styles.IconStyle} />;
@@ -13,18 +13,7 @@ function renderPhoneIcon() {
 export function SignInScreen(props) {
   const {navigation} = props;
 
-  const [input, changeInput] = React.useState({
-    value: '',
-    isValid: false,
-    touched: false,
-  });
-  const updateInput = (inputValue) => {
-    changeInput({
-      value: inputValue,
-      isValid: validate(inputValue, [{key: 'isPhone'}]),
-      touched: true,
-    });
-  };
+  const [input, changeInput] = useInput('', [{key: 'isPhone'}]);
 
   const doneHandler = () => {
     if (!input.isValid) {
@@ -47,7 +36,7 @@ export function SignInScreen(props) {
           underlined
           placeholder="Phone                              "
           WrapperStyle={styles.WrapperStyle}
-          onChangeText={updateInput}
+          onChangeText={changeInput}
           keyboardType="numeric"
           onSubmitEditing={doneHandler}
           // Phone Icon :

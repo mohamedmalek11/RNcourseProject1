@@ -14,8 +14,7 @@ const styles = ScaledSheet.create({
   WrapperStyle: {
     marginHorizontal: '40@s',
     margin: '5@s',
-    paddingTop:15,
-
+    paddingTop: 15,
   },
   InputWrapper: {
     flex: 1,
@@ -33,8 +32,8 @@ const styles = ScaledSheet.create({
     marginRight: 5,
     marginBottom: 5,
   },
-  titleStyle:{
-    fontSize:'15@s',
+  titleStyle: {
+    fontSize: '15@s',
   },
 });
 export default styles;

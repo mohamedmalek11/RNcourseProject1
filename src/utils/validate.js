@@ -1,12 +1,12 @@
 const rulesValidatorMapper = {
   isPhone: ValidatePhone,
   isMinimumChars: validateIsMinimumChars,
-  isConfimationCode: ValidateConfimationCode
+  isConfimationCode: ValidateConfimationCode,
 };
 function validateIsMinimumChars(inputValue, {minimumChars}) {
   return inputValue.length >= minimumChars;
 }
-function ValidateConfimationCode(userInput){
+function ValidateConfimationCode(userInput) {
   if (userInput.length !== 4) {
     return false;
   }

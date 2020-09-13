@@ -48,8 +48,8 @@ export function SignInScreen(props) {
           placeholder="Phone                              "
           WrapperStyle={styles.WrapperStyle}
           onChangeText={updateInput}
-          keyboardType = "numeric"
-          onSubmitEditing = {doneHandler}
+          keyboardType="numeric"
+          onSubmitEditing={doneHandler}
           // Phone Icon :
           renderIconLeft={renderPhoneIcon}
         />

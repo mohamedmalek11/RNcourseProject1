@@ -47,7 +47,7 @@ export function SignInScreen(props) {
           underlined
           placeholder="Phone                              "
           WrapperStyle={styles.WrapperStyle}
-          onChange={updateInput}
+          onChangeText={updateInput}
           // Phone Icon :
           renderIconLeft={renderPhoneIcon}
         />

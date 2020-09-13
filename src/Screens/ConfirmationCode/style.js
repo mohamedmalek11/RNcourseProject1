@@ -12,9 +12,10 @@ const styles = ScaledSheet.create({
     alignItems: 'center',
   },
   WrapperStyle: {
-    paddingHorizontal: '60@s',
     marginHorizontal: '40@s',
-    height: 40,
+    margin: '5@s',
+    paddingTop:15,
+
   },
   InputWrapper: {
     flex: 1,

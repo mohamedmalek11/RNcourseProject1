@@ -16,13 +16,10 @@ import {
   StatusBar,
   Button,
 } from 'react-native';
+import {AppContainer} from './src/Navigation';
 
-import {AppContainer} from './src/Navigation/index';
-
-class App extends React.Component {
-  render() {
-    return <AppContainer />;
-  }
+function App(props) {
+  return <AppContainer />;
 }
 
 export default App;

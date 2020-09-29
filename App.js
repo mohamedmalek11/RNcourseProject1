@@ -19,7 +19,7 @@ import {
 import {AppContainer} from './src/Navigation';
 
 function App(props) {
-  return <AppContainer />;
+  return <AppContainer isAuthenticated = {true}/>;
 }
 
 export default App;

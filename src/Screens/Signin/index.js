@@ -5,6 +5,8 @@ import {Input} from '../../components/Input';
 import {AppButton} from '../../components/AppButton';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {useInput} from '../../utils/useInput';
+import axios from 'axios';
+import react from 'react';
 
 function renderPhoneIcon() {
   return <Icon name="phone" style={styles.IconStyle} />;
@@ -12,15 +14,24 @@ function renderPhoneIcon() {
 
 export function SignInScreen(props) {
   const {navigation} = props;
+  const [isLoading, setIsLoading] = react.useState(false);
 
   const [input, changeInput] = useInput('', [{key: 'isPhone'}]);
 
   const doneHandler = () => {
-    if (!input.isValid) {
-      alert('The Phone you enterd is not correct');
-      return;
+    if (input.isValid) {
+      //api request
+      setIsLoading(true);
+      axios
+        .post('/verify', {phone: input.value})
+        .then((res) => {
+          navigation.navigate('ConfirmationCodeScreen');
+        })
+        .catch((err) => {})
+        .finally(() => {
+          setIsLoading(false);
+        });
     }
-    navigation.navigate('ConfirmationCodeScreen');
   };
 
   return (
@@ -48,6 +59,8 @@ export function SignInScreen(props) {
           title="Done"
           titleStyle={styles.ButtonStyle}
           onPress={doneHandler}
+          disabled={!input.isValid}
+          isLoading={isLoading}
         />
       </View>
     </View>

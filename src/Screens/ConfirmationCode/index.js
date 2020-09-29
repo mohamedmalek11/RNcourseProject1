@@ -3,14 +3,26 @@ import {View, Text} from 'react-native';
 import styles from './style';
 import {Input} from '../../components/Input';
 import {AppButton} from '../../components/AppButton';
+import axios from 'axios';
 import {useInput} from '../../utils/useInput';
+import react from 'react';
 
 export function ConfirmationCodeScreen(props) {
   const [input, changeInput] = useInput('', [{key: 'isConfimationCode'}]);
+  const [isLoading, setIsLoading] = react.useState(false);
+  const {phone} = props.route.params;
 
   const ConfirmHandler = () => {
-    if (!input.isValid) {
-      alert('The Confirmation Code is not correct');
+    if (input.isValid) {
+      //Api request
+      setIsLoading(true);
+      axios
+        .post('/verify/validate', {phone, code: input.value})
+        .then((res) => {})
+        .catch((err) => {})
+        .finally(() => {
+          setIsLoading(false);
+        });
     }
   };
   return (
@@ -38,6 +50,8 @@ export function ConfirmationCodeScreen(props) {
           WrapperStyle={styles.ButtonStyle}
           titleStyle={styles.titleStyle}
           onPress={ConfirmHandler}
+          isLoading={isLoading}
+          disabled={!input.isValid}
         />
       </View>
     </View>
